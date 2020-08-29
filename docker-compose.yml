@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    run:
+        container_name: run
+        build: ${PWD}
+        tty: true
+        volumes: 
+            - ${PWD}/images:/images
