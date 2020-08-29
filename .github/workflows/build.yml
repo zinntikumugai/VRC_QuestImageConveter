@@ -10,11 +10,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: build
-        run: docker-compose build
-      - name: build run
-        run: docker-compose up
-      - name: build make
-        run: mkdir dist && cp images/*.mp4 dist
+        run: |
+          docker-compose build
+          docker-compose up
+          mkdir dist && cp images/*.mp4 dist
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
