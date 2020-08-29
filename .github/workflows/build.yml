@@ -11,7 +11,7 @@ jobs:
 
       - name: build
         run: docker-compose build
-      - nmae: build run
+      - name: build run
         run: docker-compose up
       - name: build make
         run: mkdir dist && cp images/*.mp4 dist
