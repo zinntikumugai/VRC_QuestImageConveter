@@ -11,5 +11,6 @@ jobs:
 
       - name: build
         run: |
+          chmod +x images/run.sh
           docker-compose build
           docker-compose up

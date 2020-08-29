@@ -14,5 +14,4 @@ WORKDIR /images
 #    jq \
 #    && apt clean \
 #    && rm -rf /var/lib/apt/lists/*
-
 CMD ["/images/run.sh"]
