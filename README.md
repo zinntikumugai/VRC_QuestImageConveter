@@ -1,3 +1,6 @@
+![auto build](https://github.com/zinntikumugai/VRC_QuestImageConveter/workflows/auto%20build/badge.svg?branch=master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/feb7e53d-8573-4ad8-9cbc-f67f5e24b23f/deploy-status)](https://app.netlify.com/sites/vrc-questimageconveter/deploys)
+
 ## なにこれ
 VRChat SDK内にある`VRC_Panorama`がQuestで高確率で動かないため、`VideoPlayer`で代用する方法が挙げられたが、各個人で変換するのはめんどいと思うので、公開された画像URLより取得し、動画に変換するやつ  
 
