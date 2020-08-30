@@ -9,12 +9,12 @@ VRChat SDK内にある`VRC_Panorama`がQuestで高確率で動かないため、
 ## 使い方
 1. GitHubとか分からない人
     - [管理者のTwitter](https://twitter.com/uesitananame55)などに声をかけてください
-1. 自分で追加する方法
+1. GitHub分かる人
     - `images/getlist.json`に画像ファイル名と画像URLを追加する
     - プルリクを送る
-
-## デバック方法
+1. Dockerわかっちゃう系
 ```bash
+vim images/getlist.json
 docker-compose build
 docker-compose up
 ```
