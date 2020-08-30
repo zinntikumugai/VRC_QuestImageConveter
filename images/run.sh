@@ -6,8 +6,6 @@ JSON=`cat getlist.json`
 echo "-- row json --"
 echo "$JSON"
 echo "--------------"
-jq -c ".[]" <<<"$JSON"
-echo "--------------"
 
 convert () {
     echo "$1 -> $2"
@@ -34,7 +32,6 @@ do
         echo "$name downlaod."
     fi
 
-    echo "$name" "$filename"
     convert "$name" "$filename"
 
     if [ -e "$filename" ];then
