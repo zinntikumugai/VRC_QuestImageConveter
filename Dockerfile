@@ -6,6 +6,6 @@ RUN apk update \
     jq \
     curl \
     bash \
-    rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/*
 WORKDIR /images
 CMD ["/images/run.sh"]
