@@ -9,7 +9,7 @@ echo "--------------"
 
 convert () {
     echo "$1 -> $2"
-    ffmpeg -y -loglevel 28 -framerate 60 -i $1 -vframes 1 -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -vcodec libx264 -pix_fmt yuv420p -r 60 $2 < /dev/null
+    ffmpeg -y -loglevel 28 -framerate 60 -i $1 -vframes 1 -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -vcodec libx264 -pix_fmt yuv420p -t 2.0 -loop 1 -r 60 $2 < /dev/null
     
 }
 
