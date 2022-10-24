@@ -3,22 +3,27 @@ on:
   push:
   pull_request:
     types: [opened, synchronize]
+    
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: build
         run: |
           chmod +x images/*.sh
-          docker-compose build
-          docker-compose up
+          docker compose build
+          docker compose up
           mkdir dist && cp images/*.mp4 dist
           ls dist
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './dist'
           production-branch: master
