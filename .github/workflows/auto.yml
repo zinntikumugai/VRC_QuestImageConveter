@@ -16,8 +16,8 @@ jobs:
       - name: build
         run: |
           chmod +x images/*.sh
-          docker-compose build
-          docker-compose up
+          docker compose build
+          docker compose up
           mkdir dist && cp images/*.mp4 dist
           ls dist
 
